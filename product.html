@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoreClean Pro - Купить очиститель пор</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/product.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="/">PoreClean Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <button class="btn btn-link nav-link" id="themeToggle">
+                            <i class="bi bi-sun-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-link nav-link" id="langToggle">RU</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <main class="product-page container py-5">
+        <div class="row g-4">
+            <!-- Product Gallery -->
+            <div class="col-lg-6">
+                <div class="product-gallery">
+                    <div class="main-image mb-3">
+                        <img src="https://placehold.co/600x600" alt="PoreClean Pro" class="img-fluid rounded"
+                            id="mainImage">
+                    </div>
+
+                    <div class="thumbnails d-flex gap-2">
+                        <img src="https://placehold.co/600x600" alt="PoreClean Pro 1" class="thumbnail active"
+                            data-src="https://placehold.co/600x600" onclick="changeImage(this)">
+                        <img src="https://placehold.co/600x600" alt="PoreClean Pro 2" class="thumbnail"
+                            data-src="https://placehold.co/600x600" onclick="changeImage(this)">
+                        <img src="https://placehold.co/600x600" alt="PoreClean Pro 3" class="thumbnail"
+                            data-src="https://placehold.co/600x600" onclick="changeImage(this)">
+                        <img src="https://placehold.co/600x600" alt="PoreClean Pro 4" class="thumbnail"
+                            data-src="https://placehold.co/600x600" onclick="changeImage(this)">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-lg-6">
+                <h1 class="product-title" data-translate="product-title">PoreClean Pro - Профессиональный очиститель пор
+                </h1>
+
+                <div class="price-block my-4">
+                    <span class="old-price" data-translate="old-price">110$</span>
+                    <span class="current-price" data-translate="current-price">3999 ₽</span>
+                    <span class="discount-badge" data-translate="discount">-33%</span>
+                </div>
+
+                <div class="quantity-selector mb-4">
+                    <label for="quantity" class="form-label" data-translate="quantity">Количество:</label>
+                    <div class="input-group" style="width: 150px;">
+                        <button class="btn btn-outline-secondary" type="button" onclick="updateQuantity(-1)">-</button>
+                        <input type="text" class="form-control text-center" id="quantity" value="1" min="1" max="10">
+                        <button class="btn btn-outline-secondary" type="button" onclick="updateQuantity(1)">+</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-lg w-100 mb-4" data-translate="buy-button">Купить сейчас</button>
+
+                <div class="product-features mb-4">
+                    <div class="feature-item">
+                        <i class="bi bi-battery-charging"></i>
+                        <span data-translate="feature-battery">2 часа работы</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span data-translate="feature-power">5 уровней мощности</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="bi bi-shield-check"></i>
+                        <span data-translate="feature-warranty">1 год гарантии</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Description -->
+        <section class="product-description mt-5">
+            <h2 class="section-title" data-translate="description-title">Описание</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="lead" data-translate="description-text">
+                        PoreClean Pro - это профессиональный очиститель пор, который использует передовую вакуумную
+                        технологию для глубокого очищения кожи. Устройство эффективно удаляет черные точки, излишки
+                        себума и омертвевшие клетки кожи, оставляя вашу кожу чистой и сияющей.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specifications -->
+        <section class="technical-specs mt-5">
+            <h2 class="section-title" data-translate="specs-title">Технические характеристики</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label" data-translate="spec-material">Материал:</div>
+                    <div class="spec-value" data-translate="spec-material-value">Медицинский пластик + нержавеющая сталь
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label" data-translate="spec-power">Мощность:</div>
+                    <div class="spec-value" data-translate="spec-power-value">3Вт</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label" data-translate="spec-battery">Аккумулятор:</div>
+                    <div class="spec-value" data-translate="spec-battery-value">1200 мАч</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label" data-translate="spec-size">Размеры:</div>
+                    <div class="spec-value" data-translate="spec-size-value">180 x 35 x 35 мм</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="customer-reviews mt-5">
+            <h2 class="section-title" data-translate="reviews-title">Отзывы покупателей</h2>
+            <div class="overall-rating mb-4">
+                <div class="rating-number">4.8</div>
+                <div class="stars">★★★★★</div>
+                <div class="rating-count" data-translate="rating-count">87 отзывов</div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-translate="review1-text">Отличный прибор! Использую уже месяц, результат
+                        заметен после первого применения. Кожа стала значительно чище.</p>
+                    <div class="review-author" data-translate="review1-author">Анна К.</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-translate="review2-text">Очень удобный в использовании. Заряда хватает
+                        надолго, есть несколько насадок в комплекте.</p>
+                    <div class="review-author" data-translate="review2-author">Михаил Д.</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text" data-translate="review3-text">Хороший прибор за свои деньги. Единственный
+                        минус - нужно время, чтобы привыкнуть к использованию.</p>
+                    <div class="review-author" data-translate="review3-author">Елена В.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shipping and Payment -->
+        <section class="shipping-payment mt-5">
+            <h2 class="section-title" data-translate="delivery-title">Доставка и оплата</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h3 data-translate="shipping-title">Способы доставки</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-truck"></i> <span data-translate="shipping-courier">Курьерская
+                                    доставка</span></li>
+                            <li><i class="bi bi-box-seam"></i> <span data-translate="shipping-post">Почта России</span>
+                            </li>
+                            <li><i class="bi bi-shop"></i> <span data-translate="shipping-pickup">Пункты выдачи</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h3 data-translate="payment-title">Способы оплаты</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-credit-card"></i> <span data-translate="payment-card">Банковской
+                                    картой</span></li>
+                            <li><i class="bi bi-cash"></i> <span data-translate="payment-cash">Наличными при
+                                    получении</span></li>
+                            <li><i class="bi bi-wallet2"></i> <span data-translate="payment-electronic">Электронные
+                                    кошельки</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 data-translate="footer-contacts">Контакты</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: porclean.pro@gmail.com</li>
+                        <!-- <li data-translate="footer-phone">Телефон: 8 800 123-45-67</li> -->
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 data-translate="footer-policy">Политика</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light" data-translate="footer-returns">Возврат товара</a></li>
+                        <li><a href="#" class="text-light" data-translate="footer-privacy">Конфиденциальность</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 data-translate="footer-social">Социальные сети</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/product.js"></script>
+</body>
+
+</html>

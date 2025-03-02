@@ -1,0 +1,157 @@
+/* Import Bootstrap and Bootstrap Icons */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Custom Variables */
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #F5A623;
+  --transition-speed: 0.3s;
+}
+
+[data-bs-theme="dark"] {
+  --primary-color: #64A7F5;
+  --secondary-color: #FFB84D;
+}
+
+/* General Styles */
+body {
+  padding-top: 76px;
+}
+
+/* Container Override */
+.container {
+  width: 100%;
+  max-width: 1200px !important;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Header */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 6rem 0;
+}
+
+.product-image-placeholder {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Features Section */
+.card {
+  transition: transform var(--transition-speed);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  color: var(--primary-color);
+}
+
+/* How to Use Section */
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+}
+
+/* Reviews Section */
+.stars {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+/* Shipping Section */
+.shipping i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem;
+}
+
+.social-icons i {
+  font-size: 1.5rem;
+  transition: color var(--transition-speed);
+}
+
+.social-icons a:hover i {
+  color: var(--primary-color) !important;
+}
+
+/* Theme Toggle Animation */
+#themeToggle {
+  transition: transform var(--transition-speed);
+}
+
+#themeToggle:hover {
+  transform: rotate(30deg);
+}
+
+.ratio {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px !important;
+  }
+  
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100% !important;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
